@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serve to Client</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <%- include ("partial/nav.ejs") %>
+    <h1>Let's start creating this Contact page</h1>
+    <!-- <h4><%= qs.person %> Works in <%= qs.dept %> Department</h4> -->
+    
+    <form id="contact-form" method="POST" action="/coontact">
+        <lable for="Who"> Contact to? </lable>
+        <input type="text" name="Who" value="<%= qs.person %>">
+        <lable for="department"> Which Department? </lable>
+        <input type="text" name="Department" value="<%= qs.dept %>">
+        <lable for="email"> Your E-mail </lable>
+        <input type="email" name="Email" >
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
